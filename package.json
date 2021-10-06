@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/maanti/server-technologies-task-1#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

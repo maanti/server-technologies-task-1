@@ -1,6 +1,7 @@
 const express = require('express');
 const https = require('https');
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
 const port = 443;
@@ -12,8 +13,10 @@ const options = {
   cert,
 };
 
+app.use(cors());
+
 app.get('/', (req, res) => {
-  res.header('X-Author', 'itmo225071').header('Access-Control-Allow-Origin', '*').send('itmo225071');
+  res.header('X-Author', 'itmo225071').send('itmo225071');
 });
 
 const server = https.createServer(options, app);
