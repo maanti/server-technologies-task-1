@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная</title>
+    <meta charset="utf-8" />
+</head>
+<script>
+    async function req() {
+        const input = document.getElementById("inp");
+        const response = await fetch(input.value);
+        input.value = await response.text();
+    }
+</script>
+<body>
+<input id="inp">
+<button id="bt" onclick="req()"></button>
+</body>
+<html>
